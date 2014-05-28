@@ -5,3 +5,11 @@ Allows you to create forms in native mvc manner, with validation messages from u
 
 
 ###How to use
+
+###Partial View (Macro or Template)
+
+    //Place where you want your form to appear
+    @Html.Action("GetContactForm", "Form")
+    
+
+###Controller
