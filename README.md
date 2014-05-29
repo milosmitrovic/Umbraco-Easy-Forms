@@ -12,4 +12,19 @@ Allows you to create forms in native mvc manner, with validation messages from u
     @Html.Action("GetContactForm", "Form")
     
 
+###Model
+
+    public class FormModel
+    {
+        [UmbracoRequred("Text1RequiredErrorKey")]
+        public string Text1 { get; set; }
+    }
+
+
 ###Controller
+
+        [HttpGet]
+        public ActionResult GetContactForm()
+    	{
+    	    return PartialView("ContactFormPartial", new FormModel());
+        }
